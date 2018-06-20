@@ -1,0 +1,27 @@
+{
+    "name": "tned-quiz-demo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/tned-quiz/tned-quiz.github.io.git",
+    "author": "tned-quiz <karine@steerity.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "parcel index.html",
+        "watch": "parcel watch index.html",
+        "build": "parcel build index.html --public-url ./",
+        "build:serv": "http-server dist"
+    },
+    "dependencies": {
+        "autoprefixer": "^8.6.2",
+        "lodash": "^4.17.10",
+        "parcel": "^1.8.1",
+        "postcss-modules": "^1.1.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^4.19.1",
+        "http-server": "^0.11.1"
+    }
+}

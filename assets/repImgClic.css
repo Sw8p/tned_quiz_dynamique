@@ -1,0 +1,28 @@
+/* ==== REPONSES IMG CLICK==== */
+.reponses.clickImg_rep{
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, minmax(150px, 20%));
+  //grid-template: 33% 33% 33% / 33% 33% 33%;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-around;
+}
+.labelImgBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .4rem;
+}
+.reponses.clickImg_rep input.rad_img{
+  display: none;
+}
+.labelImgBox .img_btn{
+  cursor: pointer;
+  border: .1rem solid var(--secondary-ft-color);
+  border-radius: 1rem;
+  background-color: var(--main-bg-color);
+}
+.labelImgBox .img_btn:hover{
+  border-color: var(--primary-color);
+  background-color: var(--primary-op-color);
+}

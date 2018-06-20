@@ -1,0 +1,115 @@
+/* ================ GENERAL MAIN QUIZ ================ */
+.main_quiz, .main_quiz form{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* ================ MAIN QUIZ ================ */
+.main_quiz{
+  position: absolute;
+}
+.main_quiz form{
+  display: grid;
+  grid-template-rows: 2fr 6fr 1fr;
+}
+
+/* ======= HEAD BOX QUIZ ======= */
+.head_box_quiz{
+  //margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.head_box_quiz>*{
+  margin: 0;
+}
+.head_box_quiz .title{
+  color: var(--primary-color);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.head_box_quiz .gameplay{
+  color: var(--main-ft-color);
+  opacity: .6;
+  text-align: center;
+}
+.head_box_quiz .instruct{
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  padding-top: .5rem;
+}
+
+/* ================ SECTION QUIZ ================ */
+.section_box_quiz{
+  background-color: var(--secondary-color);
+  margin-top: 2.2rem;
+  padding-bottom: .8rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* ================ TIMER ================ */
+#timer{
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: .25rem solid var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+#timer p{
+  margin: 0;
+  font-family: "Digit";
+  font-size: 1.5rem;
+  text-align: center;
+  width: 5.5rem;
+  height: 3.5rem;
+  border-radius: 2.25rem/50%;
+  border: .25rem solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -.5rem;
+}
+
+
+/* ======= VALID ======= */
+.valid_box_quiz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[name="valid"]{
+  font-family: "Asap_bold";
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: .75rem 2.5rem;
+  margin: 0 auto;
+  border-radius: 1.25rem/50%;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+  cursor: pointer;
+  border: 1px solid var(--main-bg-color);
+}
+input[name="valid"]:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+/*remove focus chrome (border blue)*/
+input[name="valid"]:focus{
+  outline: 0;
+}
+input[name="valid"]:active{
+  outline: none;
+}

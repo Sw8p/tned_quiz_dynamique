@@ -1,0 +1,94 @@
+/*********** CURSOR ***********/
+/* ==== REPONSES CURSOR==== */
+.reponses.curseur_rep{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reponses.curseur_rep input{
+  min-width: 200px;
+  cursor: grab;
+  margin: 1rem;
+}
+.reponses.curseur_rep span.crs_count{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 1rem;
+}
+
+/*********** CURSOR INPUT DEFAULT NAVIGATOR ***********/
+/*** FIREFOX ***/
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid var(--secondary-bg-color);
+
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: var(--secondary-ft-color);
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--main-bg-color);
+    //border: 1px solid var(--primary-color);
+    box-shadow: 0 .1rem .25rem var(--main-ft-op-color);
+}
+input[type=range]:focus::-moz-range-thumb{
+  background: var(--primary-color);
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid var(--secondary-bg-color);
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: var(--secondary-ft-color);
+}
+
+/*** Chrome, Safari, Opera ***/
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: var(--secondary-ft-color);
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--main-bg-color);
+    box-shadow: 0 .1rem .25rem var(--main-ft-op-color);
+    margin-top: -1rem;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  background: var(--primary-color);
+}
+
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--secondary-ft-color);
+}

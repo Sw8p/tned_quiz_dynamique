@@ -1,0 +1,21 @@
+/* ======= CONTENT BOX QUIZ ======= */
+.content_box_quiz.typeCode{
+  grid-template-areas:
+    'assets intitules'
+    'assets reponses'
+    'assets intitules'
+    'assets reponses';
+  grid-column-gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.content_box_quiz.typeCode .assets{
+  grid-row: 1 / 5;
+}
+.content_box_quiz.typeCode .intitules:nth-child(4){
+  grid-row: 3 / 4;
+}
+
+.content_box_quiz.typeCode .reponses:nth-child(5){
+  grid-row: 4 / 5;
+}

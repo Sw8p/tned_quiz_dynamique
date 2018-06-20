@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test de niveau</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="assets/global.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/repQr.css" />
+  <link rel="stylesheet" type="text/css" href="assets/repImgClic.css" />
+  <link rel="stylesheet" type="text/css" href="assets/repCursor.css" />
+  <link rel="stylesheet" type="text/css" href="assets/repTypeCode.css" />
+  <link rel="stylesheet" type="text/css" href="assets/repTxtTr.css" />
+  <link rel="stylesheet" type="text/css" href="assets/repOrdLst.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/mq.css" />
+  <link rel="stylesheet" type="text/css" href="assets/result.css" />
+
+
+</head>
+<body>
+  <!------------------ MAIN QUIZ ------------------>
+  <div class="main_quiz">
+
+    <!------------ FORM ------------>
+    <form action="" method="post">
+
+        <!------------ head_box_quiz ------------>
+        <div class="head_box_quiz">
+            <!-- Rang question -->
+            <h1 class="title rang_q"></h1>
+            <!-- gameplay -->
+            <h3 class="gameplay"></h3>
+            <!-- instructions -->
+            <p class="instruct"></p>
+        </div>
+
+        <!------------ section_box_quiz ------------>
+        <div class="section_box_quiz">
+          <!------------ TIMER ------------>
+          <div id="timer">
+              <p>-TIMER-</p>
+          </div>
+
+
+          <!------------ content_box_quiz ------------>
+          <div class="content_box_quiz">
+            <!-- INTITULE -->
+            <div class="intitules"></div>
+            <!-- ASSET -->
+            <div class="assets"></div>
+            <!-- REPONSE -->
+            <div class="reponses"></div>
+          </div>
+        </div>
+
+        <!------------ valid_box_quiz ------------>
+        <div class="valid_box_quiz">
+          <!-- Valid form -->
+          <input type="button" name="valid" value="Valider" />
+        </div>
+
+    </form>
+
+  </div><!-- end main_quiz -->
+
+  <script type="module" src="./src/index.js"></script>
+
+</body>
+</html>

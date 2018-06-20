@@ -1,0 +1,69 @@
+/* ==== REPONSES ORD LST==== */
+.reponses.ord_lst_rep{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.reponses ol{
+  font-weight: bold;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(2.2rem, 1fr));
+  justify-content: stretch;
+  align-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+}
+.reponses li{
+  height: 100%;
+  -ms-height: auto;
+  min-height: 2rem;
+  max-height: 3rem;
+  width: 100%;
+  max-width: 650px;
+  min-width: 3rem;
+  margin: .4rem;
+  /*display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;*/
+}
+.reponses .droparea{
+  height: 68%;
+  font-weight: normal;
+  //padding: .2em;
+  margin: .6rem;
+  margin-top: 2%;
+  //-ms-margin: auto .6rem;
+  //margin-top: .5rem;
+  border-radius: .5em;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-bg-color);
+  box-shadow: 1px 1px 2px var(--main-ft-color) inset;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@supports (-ms-ime-align:auto) {
+  .reponses .droparea {
+    margin: auto .6rem;
+    position: relative;
+    bottom: 50%;
+  }
+}
+.reponses .droparea:hover{
+  background-color: var(--secondary-color);
+}
+.reponses .draggable_span::first-letter{
+  text-transform: uppercase;
+}
+.reponses .draggable_span{
+  cursor: grab;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: .5em;
+  padding-left: .8rem;
+}

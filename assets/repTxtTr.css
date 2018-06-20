@@ -1,0 +1,77 @@
+.txt_tr_rep{
+  align-items: stretch;
+  justify-self: center;
+}
+.txt_tr_rep select {
+  width: 8rem;
+  height: 2rem;
+  font-size: 1rem;
+    padding:.1rem;
+    margin: 0;
+    -webkit-border-radius:.4rem;
+    -moz-border-radius:.4rem;
+    border-radius:.4rem;
+    -webkit-box-shadow: 0 2px 2px var(--main-ft-op-color), 0 -1px var(--secondary-color) inset;
+    -moz-box-shadow: 0 2px 2px var(--main-ft-op-color), 0 -1px var(--secondary-color) inset;
+    box-shadow: 0 2px 2px var(--main-ft-op-color), 0 -1px var(--secondary-color) inset;
+    background-color: var(--main-bg-color);
+    color: var(--main-ft-color);
+    border: 1px solid var(--main-bg-color);
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+.txt_tr_rep select:hover{
+  background-color: var(--secondary-db-color);
+}
+
+.txt_tr_rep select>*{
+  width: 8rem;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+}
+.txt_tr_rep select option:hover{
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .txt_tr_rep select {padding-right:1.5rem}
+}
+.txt_tr_rep .custom_select{
+  display: inline-block;
+  margin: .2rem;
+}
+.txt_tr_rep .custom_select{position:relative}
+.txt_tr_rep .custom_select:after {
+    content:'>';
+    font-family: "Consolas", monospace;
+    font-size: 1rem;
+    color: var(--main-ft-color);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+  position:absolute;
+    right:.7rem;
+    top:.3rem;
+    padding:0 0 .1rem;
+    border-bottom:1px solid var(--secondary-color);
+    pointer-events:none;
+}
+.txt_tr_rep .custom_select:before {
+    content:'';
+    position:absolute;
+    right:.5rem;
+    top: .5rem;
+    width:1rem;
+    height:1rem;
+    //background:var(--main-bg-color);
+    border-left: 1px solid var(--secondary-color);
+    pointer-events:none;
+    display:block;
+}

@@ -1,0 +1,52 @@
+/* ================ GENERAL VARIABLES ================ */
+:root{
+  /* Main Color */
+  --main-bg-color : #FFF;
+  --main-ft-color : #000;
+  --main-ft-op-color : rgba(0, 0, 0, .3);
+  /* Primary Color */
+  --primary-color : rgb(255, 131, 0);
+  --primary-op-color : rgba(255, 131, 0, .6);
+  --primary-active-color : sandybrown;
+  /* Secondary Color */
+  --secondary-color : rgba(216, 216, 216, .3);
+  --secondary-bg-color : rgba(216, 216, 216, .3);
+  --secondary-db-color : rgba(216, 216, 216, .6);
+  --secondary-ft-color : rgba(216, 216, 216, 1);
+
+  /* BoxStyle */
+  --primary-border : 1px solid var(--secondary-color);
+}
+
+/* ================ GENERAL ================ */
+html, body{
+  margin: 0; padding: 0;
+  height: 100%;
+  width: 100%;
+}
+html{
+  font-size: 20px;
+  font-family: "Asap";
+  color: var(--main-ft-color);
+}
+body{
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+  font-size: 1rem;
+  /*display: flex;
+  flex-flow: column nowrap;*/
+}
+body>*{
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 2rem;
+}
+h3{
+  font-size: .8rem;
+}
+
+label::first-letter{
+  text-transform: uppercase;
+}

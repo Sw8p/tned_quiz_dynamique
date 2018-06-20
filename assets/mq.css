@@ -1,0 +1,122 @@
+/* ================ MEDIAQUERY ================ */
+@media all and (min-width: 1200px){
+  .labelBox{
+    max-width: 500px;
+    min-width: 380px;
+  }
+}
+/*@media all and (max-height: 640px){
+  // sur mini tel..
+  //move timer in corner top right
+  html{
+    font-size: .8rem;
+  }
+  #timer{
+    width: 26%;
+    position: absolute;
+    right: 4%;
+    top: 2%;
+  }
+  #timer p{
+    color: darkslategray;
+  }
+  .head_box_quiz h1{
+    text-align: left;
+    color: rgb(255, 164, 68);
+  }
+  .head_box_quiz h3{
+    display: none;
+  }
+  .content_box_quiz{
+    display: grid;
+    grid-template-rows: 15% 50% 35%;
+    grid-template-columns: 100%;
+  }
+  .assets{
+    grid-row: 2 / 3;
+    padding: 0 1rem;
+  }
+}
+*/
+@media all and (max-width: 1200px){
+  .content_box_quiz{
+    grid-template-areas: 'intitules intitules' 'assets reponses';
+    align-items: center;
+    justify-items: center;
+  }
+  .content_box_quiz.typeCode .assets{
+    display: none;
+  }
+  .content_box_quiz.typeCode .reponses:nth-child(3){
+    grid-column: 1/3;
+  }
+  .content_box_quiz.typeCode .reponses:nth-child(5){
+    grid-column: 1/3;
+  }
+
+  .assets{
+    grid-row: 2 / 3;
+  }
+  .assets img, .assets video{
+    max-height: 350px;
+  }
+  .reponses{
+    justify-content: center;
+    align-items: stretch;
+    justify-self: center;
+  }
+}
+
+/* MIDDLE lrg < 600px display qBox en long */
+@media all and (max-width: 860px){
+  .content_box_quiz{
+    grid-template-columns: 1fr;
+    grid-template-areas: 'intitules' 'assets' 'reponses';
+  }
+  .content_box_quiz.typeCode{
+    grid-template-rows: repeat(2, minmax(40px, 60px) 1fr);
+  }
+  .content_box_quiz.typeCode .reponses:nth-child(3){
+    grid-row: 2/3;
+  }
+  .content_box_quiz.typeCode .intitules p{
+    margin: 0;
+  }
+  .assets{
+    grid-row: 2/3;
+  }
+  .reponses.clickImg_rep{
+    grid-template: repeat(3, 1fr) / repeat(3, minmax(120px, 33%));
+  }
+  .img_btn{
+    width: 80%;
+    max-width: 120px;
+    height: auto;
+  }
+  .txt_tr_rep{
+    padding-top: 1rem;
+  }
+}
+
+/* SMARTPHONE lrg < 500px display qBox en long */
+@media all and (max-width: 500px){
+  html{
+    font-size: 16px;
+  }
+  .assets img, .assets video{
+    max-height: 220px;
+    max-width: 90%;
+  }
+  input[type="range"] {
+    width: 220px;
+  }
+  input[type=range]::-moz-range-track {
+    width: 220px;
+  }
+}
+
+@media all and (max-width: 400px){
+  .reponses.clickImg_rep{
+    grid-template: repeat(5, 1fr) / repeat(2, minmax(120px, 33%));
+  }
+}

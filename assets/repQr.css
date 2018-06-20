@@ -1,0 +1,55 @@
+/*********** QRM / QRU ***********/
+.labelBox{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-ft-color);
+  border: 1px solid var(--secondary-ft-color);
+  border-radius: 1.25rem/50%;
+  padding: .75rem 2rem .75rem 4rem;
+  margin-top: 1rem;
+  position: relative;
+  cursor: pointer;
+  min-width: 12rem;
+}
+.labelBox:hover{
+  background-color: var(--primary-op-color);
+    border: 1px solid var(--main-bg-color);
+}
+
+input[type=radio], input[type=checkbox], .checkmark{
+  position: absolute;
+  top : calc((100% - 1.2rem - 0.2rem)/2 );
+  left: 1.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  cursor: pointer;
+}
+input[type=radio], input[type=checkbox]{
+  /* Hide the browser's default checkbox */
+  opacity: 0;
+}
+.checkmark{
+  background-color: var(--secondary-db-color);
+  opacity: .6;
+  border: .1rem solid var(--secondary-ft-color);
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.labelBox:hover input ~ .checkmark {
+  background-color: var(--main-bg-color);
+  opacity: .6;
+}
+
+/* When the checkbox is checked, add a plain background */
+.labelBox input:checked ~ .checkmark {
+  background-color: var(--secondary-color);
+  opacity: 1;
+  box-shadow: 0 0 .15rem .1rem var(--secondary-color) inset;
+}
+.labelBox:active{
+  background-color: var(--primary-active-color);
+}
