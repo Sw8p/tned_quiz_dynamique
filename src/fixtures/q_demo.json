@@ -1,4 +1,4 @@
-var demoCorpus = {
+{
   "gameplays" : [
     {
       "id" : "qru",
@@ -19,7 +19,7 @@ var demoCorpus = {
     {
       "id" : "txt_tr",
         "type" : [
-          {"name" : "select", "default": true, "libelle" : "Texte à trou"},
+          {"name" : "select", "default": true, "libelle" : "Text à trou"},
           {"name" : "d&d", "libelle" : "Drag and Drop"}
         ],
         "instruction" : "Trouver les mots manquants"
@@ -132,8 +132,8 @@ var demoCorpus = {
       "reponses" : [
         {"label" : "mettre le pied face au frein", "value" : true},
         {"label" : "observer attentivement la voiture bleue", "value" : true},
-        {"label" : "maintenir son allure", "value" : false},
-        {"label" : "etablir un contact visuel", "value" : true}
+        {"label" : "maintenir mon allure", "value" : false},
+        {"label" : "etablir un contact visue", "value" : true}
       ]
     },
     {
@@ -322,6 +322,4 @@ var demoCorpus = {
       ]
     }
   ]
-};
-
-export {demoCorpus};
+}

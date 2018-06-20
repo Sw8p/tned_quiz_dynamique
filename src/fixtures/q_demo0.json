@@ -1,51 +1,15 @@
-var demoCorpus = {
-  "gameplays" : [
-    {
-      "id" : "qru",
-      "type" : [
-        {"name" : "radio", "default" : true, "libelle" : "Question Vrai - Faux"},
-        {"name" : "img_btn", "libelle" : "Selectionner l'image"}
-      ],
-      "instruction" : "Sélectionner la bonne réponse"
-    },
-    {
-      "id" : "qrm",
-      "type" : [
-        {"name" : "checkbox", "default" : true, "libelle" : "Question à choix multiple"},
-        {"name" : "img_btn", "libelle" : "Selectionner les images"}
-      ],
-      "instruction" : "Sélectionner la ou les bonnes réponses"
-    },
-    {
-      "id" : "txt_tr",
-        "type" : [
-          {"name" : "select", "default": true, "libelle" : "Texte à trou"},
-          {"name" : "d&d", "libelle" : "Drag and Drop"}
-        ],
-        "instruction" : "Trouver les mots manquants"
-    },
-    {
-      "id" : "curseur",
-      "type" : [
-        {"name" : "range", "default": true, "libelle" : "Slider"}
-      ],
-      "instruction" : "Déplacer le curseur"
-    },
-    {
-      "id" : "ord_lst",
-      "type" : [
-        {"name" : "d&d", "default": true, "libelle" : "Remettre dans l'ordre"}
-      ],
-      "instruction" : "Maintenir cliqué l'élément et déplacer"
-    },
-    {
-      "id" : "assoc",
-      "type" : [
-        {"libelle" : "Association"}
-      ],
-      "instruction" : "Relier entre eux"
-    }
-  ],
+{
+  "gameplays" : {
+    "qru" : "Question Vrai - Faux",
+    "qrm" : "Question à choix multiple",
+    "select" : "Text à trou",
+    "curseur" : "Slider",
+    "d&d" : "Drag and Drop",
+    "ord_lst" : "Remettre dans l'ordre",
+    "img_btn_qru" : "Selectionner l'image",
+    "img_btn_qrm" : "Selectionner les images",
+    "assoc" : "Relier entre eux"
+  },
   "categorie" : [
     "connaissances",
     "compréhension",
@@ -132,8 +96,8 @@ var demoCorpus = {
       "reponses" : [
         {"label" : "mettre le pied face au frein", "value" : true},
         {"label" : "observer attentivement la voiture bleue", "value" : true},
-        {"label" : "maintenir son allure", "value" : false},
-        {"label" : "etablir un contact visuel", "value" : true}
+        {"label" : "maintenir mon allure", "value" : false},
+        {"label" : "etablir un contact visue", "value" : true}
       ]
     },
     {
@@ -164,7 +128,7 @@ var demoCorpus = {
       "reponses" : [
         {"label" : "observer dans son rétroviseur intérieur", "value" : 1},
         {"label" : "observer dans son rétroviseur extérieur droit", "value" : 2},
-        {"label" : "observer son angle mort droit", "value" : 3},
+        {"label" : "observer son angl mort droit", "value" : 3},
         {"label" : "mettre son clignotant", "value" : 4},
         {"label" : "s'arrêter pour laisser passer le cycliste", "value" : 5},
         {"label" : "tourner une fois le cycliste passé", "value" : 6}
@@ -172,8 +136,7 @@ var demoCorpus = {
     },
     {
       "id" : 9,
-      "gameplay" : "qrm",
-      "type" : "img_btn",
+      "gameplay" : "img_btn_qrm",
       "categorie" : "connaissance",
       "intitules" : "Quels usagers n’ont pas le droit de circuler sur la voie rapide ?",
       "assets" : {
@@ -194,8 +157,7 @@ var demoCorpus = {
     },
     {
       "id" : 10,
-      "gameplay" : "qrm",
-      "type" : "img_btn",
+      "gameplay" : "img_btn_qrm",
       "categorie" : "connaissance",
       "intitules" : "Quel panneaux peut on rencontrer dans une zone de stationnement payant ?",
       "assets" : {
@@ -251,7 +213,7 @@ var demoCorpus = {
     },
     {
       "id" : 13,
-      "gameplay" : "txt_tr",
+      "gameplay" : "d&d",
       "categorie" : "connaissance",
       "intitules" : "A quoi servent les voies réservées ?",
       "assets" : {
@@ -272,7 +234,7 @@ var demoCorpus = {
     },
     {
       "id" : 14,
-      "gameplay" : "txt_tr",
+      "gameplay" : "select",
       "categorie" : "connaissance",
       "intitules" : "Quels sont les avantages du covoiturage ? ",
       "reponses" : [
@@ -322,6 +284,4 @@ var demoCorpus = {
       ]
     }
   ]
-};
-
-export {demoCorpus};
+}
