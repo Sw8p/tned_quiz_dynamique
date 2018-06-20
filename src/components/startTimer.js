@@ -36,4 +36,4 @@ function checkTime(i) {
 }
 
 export {startTimer};
-export {timer};
+//export {timer};

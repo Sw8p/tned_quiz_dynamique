@@ -44,6 +44,8 @@ function getCorpus(dataObj){
 
   //init Index & chrg 1ere Q
   var x = 0;
+//end quiz
+//x = qCorpus.length-1;
 
   //recup data question
   var q = qObj.find(q => q.id === qCorpus[x]);
