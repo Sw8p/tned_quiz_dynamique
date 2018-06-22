@@ -52,7 +52,7 @@ function repQr(q, qName, urlImg, inpuType, key, divRep){
       var labelTxt = ((key !== null) ? q.reponses[key] : q.reponses)[x].label;
       labelTxt = labelTxt.substr(0,1).toUpperCase() + labelTxt.substr(1, labelTxt.length);
       label.innerHTML = labelTxt;
-      
+
       label.insertBefore(span, label.firstChild);
     }
 

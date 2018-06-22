@@ -1,5 +1,9 @@
+//AJAX XHR
+//import {getData} from './server/xhr';
+
 //getData demoCorpus
 import {demoCorpus} from './fixtures/q_demo_export';
+
 import {qCorpusAleat} from './qCorpusAleat';
 //CONTENT LOAD question
 import {loadQ} from './loadQ';
@@ -25,6 +29,11 @@ startTimer(chrono);
 
 /********* Récupération des data JSON *********/
 getCorpus(demoCorpus);
+/********* Récupération des data JSON *********/
+/*var requestURL = 'fixtures/q_demo.json';
+getData(requestURL, data => {
+  getCorpus(data);
+});*/
 
 
 

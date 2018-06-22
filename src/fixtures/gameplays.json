@@ -1,0 +1,34 @@
+{
+  "gameplays": [
+    {
+      "code": "qru",
+      "intitule": "Question Vrai - Faux",
+      "consigne": "Sélectionner la bonne réponse"
+    },
+    {
+      "code": "qrm",
+      "intitule": "Question à réponse multiples",
+      "consigne": "Sélectionner la ou les bonnes réponses"
+    },
+    {
+      "code": "curseur",
+      "intitule": "Slider",
+      "consigne": "Déplacer le curseur"
+    },
+    {
+      "code": "txt_tr",
+      "intitule": "Texte à trous",
+      "consigne": "Trouver les mots manquants"
+    },
+    {
+      "code": "ord_lst",
+      "intitule": "Liste ordonnée",
+      "consigne": "Remettre dans l'odre - Maintenir cliqué l'élément et déplacer"
+    },
+    {
+      "code": "img_btn",
+      "intitule": "Tri panneaux",
+      "consigne": "Sélectionner la ou les images correspondante.s"
+    }
+  ]
+}
