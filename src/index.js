@@ -13,6 +13,10 @@ import {loadResult} from './loadResult';
 //TIMER
 import {startTimer} from './components/startTimer';
 
+//PROGRESS BAR
+import {progressBar} from './components/progressBar';
+import {progressBarInit} from './components/progressBar';
+
 
 /********* Recupération des elmts du DOM *********/
 var qBox = document.getElementsByClassName('main_quiz')[0];
@@ -20,6 +24,9 @@ var qBox = document.getElementsByClassName('main_quiz')[0];
 var contentQuiz = qBox.getElementsByClassName('content_box_quiz')[0];
 //input Valid => Add event load new question
 var validInput = qBox.getElementsByTagName('input')[0];
+
+// barre de progression
+var progBox = document.getElementsByClassName('progress')[0];
 
 
 /* TIMER */
@@ -70,6 +77,8 @@ function getCorpus(dataObj){
 
   loadQ(q, gp, qBox, x+1, qObj.length);
 
+  progressBarInit(progBox, qCorpus.length);
+
   validInput.onclick = function(){
     //add control si rep..
     x++;
@@ -79,6 +88,9 @@ function getCorpus(dataObj){
     }
     if(x==qCorpus.length){
       loadResult(qBox)
+      /* PROGRESS BARRE */
+      progressBar(progBox, x+1);
+
     }else{
       q = qObj.find(q => q.id === qCorpus[x]);
       gp = gameObj.find(gp => gp.id === q.gameplay);
