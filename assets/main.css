@@ -154,10 +154,10 @@ progress[value]::-webkit-progress-bar {
 }
 progress::-webkit-progress-bar {
   /* style rules */
-  background: yellowgreen;
+  background: var(--secondary-color);
 }
 progress::-webkit-progress-value {
   /* style rules */
-  background-color: red;
+  background-color: var(--primary-color);
 }
 progress::-moz-progress-bar { background: var(--primary-color); }
