@@ -125,9 +125,9 @@ input[name="valid"]:active{
   align-items: center;
 }
 .progress progress{
-  width: 50%;
+  width: 40%;
   //border-radius: .6rem;
-  box-shadow: 1px 1px 4px darkslategray;
+  //box-shadow: 1px 1px 3px var(--main-ft-op-color);
 }
 .progress span{
   //display: block;
@@ -150,13 +150,14 @@ progress{
 progress[value]::-webkit-progress-bar {
   background-color: var(--primary-color);
   border-radius: .1rem;
-  box-shadow: 0 1px 3px var(--primary-op-color) inset;
+  //box-shadow: 0 1px 3px var(--primary-op-color) inset;
 }
 progress::-webkit-progress-bar {
   /* style rules */
-  background-color: purple;
+  background: yellowgreen;
 }
 progress::-webkit-progress-value {
   /* style rules */
   background-color: red;
 }
+progress::-moz-progress-bar { background: var(--primary-color); }

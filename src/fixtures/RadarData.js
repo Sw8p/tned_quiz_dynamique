@@ -1,4 +1,4 @@
-//import * as d3 from "d3";
+import * as d3 from "d3";
 /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
 
 //////////////////////////////////////////////////////////////

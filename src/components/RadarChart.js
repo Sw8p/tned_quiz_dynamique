@@ -1,4 +1,6 @@
-//import * as d3 from "d3";
+import * as d3 from "d3";
+import {data} from '../fixtures/RadarData';
+import {radarChartOptions as options} from '../fixtures/RadarData';
 /////////////////////////////////////////////////////////
 /////////////// The Radar Chart Function ////////////////
 /////////////// Written by Nadieh Bremer ////////////////
