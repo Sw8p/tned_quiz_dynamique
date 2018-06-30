@@ -14,6 +14,7 @@ function repQr(q, qName, urlImg, inpuType, key, divRep){
     input.name = (q.gameplay == 'qrm') ? (qName+'[]') : (qName);
     input.value = qName+'_rep'+x;
     input.id = qName+'_rep'+x;
+    input.checked = false;
 
     //LABEL setAttribute
     var label = document.createElement('label');

@@ -10,6 +10,9 @@ import {loadQ} from './loadQ';
 //CONTENT LOAD RESULTS
 import {loadResult} from './loadResult';
 
+//REP CONTROL
+import {repControl} from './repControl';
+
 //TIMER
 import {startTimer} from './components/startTimer';
 
@@ -65,7 +68,7 @@ function getCorpus(dataObj){
 
   //recup data question
   var q = qObj.find(q => q.id === qCorpus[x]);
-//q=qObj[6];
+//q=qObj[13];
 
   //recup data gameplay correspondant
   var gp = gameObj.find(gp => gp.id === q.gameplay);
@@ -81,24 +84,23 @@ function getCorpus(dataObj){
 
   validInput.onclick = function(){
     //add control si rep..
-    x++;
-    //empty content_box_quiz (tantque a enfant => suppr)
-    while(contentQuiz.hasChildNodes()){
-      contentQuiz.removeChild(contentQuiz.firstChild);
-    }
-    if(x==qCorpus.length){
-      loadResult(qBox)
-      /* PROGRESS BARRE */
-      progressBar(progBox, x+1);
+    //if(repControl(q.gameplay)){
+//validCheck(repControl(q.gameplay));
+      x++;
+      //empty content_box_quiz (tantque a enfant => suppr)
+      while(contentQuiz.hasChildNodes()){
+        contentQuiz.removeChild(contentQuiz.firstChild);
+      }
+      if(x==qCorpus.length){
+        loadResult(qBox)
+        /* PROGRESS BARRE */
+        progressBar(progBox, x+1);
 
-    }else{
-      q = qObj.find(q => q.id === qCorpus[x]);
-      gp = gameObj.find(gp => gp.id === q.gameplay);
-      loadQ(q, gp, qBox, x+1, qObj.length)
-    }
-
-    //tant que question & temps sinon endQuiz
-    //(x==qCorpus.length) ? loadResult(qBox) : loadQ(q, gp, qBox, x+1, qObj.length);
-
+      }else{
+        q = qObj.find(q => q.id === qCorpus[x]);
+        gp = gameObj.find(gp => gp.id === q.gameplay);
+        loadQ(q, gp, qBox, x+1, qObj.length)
+      }
+    //}
   }
 }
