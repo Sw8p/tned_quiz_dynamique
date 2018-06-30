@@ -1,4 +1,4 @@
-//import * as d3 from "d3";
+import * as d3 from "d3";
 /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
 
 //////////////////////////////////////////////////////////////
@@ -27,7 +27,7 @@ export var data = [
 //////////////////// Draw the Chart //////////////////////////
 //////////////////////////////////////////////////////////////
 
-var color = d3.scale.ordinal()
+var color = d3.scaleOrdinal()
 	.range(["#EDC951"]);
 
 export var radarChartOptions = {

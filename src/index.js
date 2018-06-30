@@ -29,6 +29,7 @@ startTimer(chrono);
 
 /********* Récupération des data JSON *********/
 getCorpus(demoCorpus);
+
 /********* Récupération des data JSON *********/
 /*var requestURL = 'fixtures/q_demo.json';
 getData(requestURL, data => {
@@ -54,10 +55,11 @@ function getCorpus(dataObj){
   //init Index & chrg 1ere Q
   var x = 0;
 //end quiz
-//x = qCorpus.length-1;
+x = qCorpus.length-1;
 
   //recup data question
   var q = qObj.find(q => q.id === qCorpus[x]);
+//getIDQ
 //q=qObj[6];
 
   //recup data gameplay correspondant
